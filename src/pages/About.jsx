@@ -29,6 +29,13 @@ import Html from '../assets/html.png';
 import Css from '../assets/css.png';
 import Js from '../assets/js.png';
 import Php from '../assets/php.png';
+import Figma from '../assets/figma.png';
+import Walling from '../assets/walling.png';
+import MagicaVoxel from '../assets/magicavoxel.png';
+import Xml from '../assets/xml.png';
+import Python from '../assets/python.png';
+import C from '../assets/c.png';
+import Cpp from '../assets/c++.png';
 import AvatarWithTooltip from "../components/AvatarWithTooltip.jsx";
 
 function About () {
@@ -135,33 +142,76 @@ function About () {
         <div className="mt-12">
             <Typography variant="h2" className="text-center">Logiciels et technologies</Typography>
 
-            <AvatarWithTooltip tooltip={"Unity"} image={Unity} />
-            <AvatarWithTooltip tooltip={"GIMP"} image={Gimp} />
-            <AvatarWithTooltip border={true} tooltip={"Tailwind"} image={Tailwind} />
-            <AvatarWithTooltip tooltip={"C#"} image={CSharp} />
-            <AvatarWithTooltip tooltip={"Jetbrains Rider"} image={Rider} />
-            <AvatarWithTooltip tooltip={"Jetbrains IntelliJ"} image={IntelliJ} />
-            <AvatarWithTooltip tooltip={"Jetbrains Webstorm"} image={WebStorm} />
-            <AvatarWithTooltip tooltip={"Jetbrains PyCharm"} image={PyCharm} />
-            <AvatarWithTooltip tooltip={"Blockbench"} image={Blockbench} />
-            <AvatarWithTooltip tooltip={"Trello"} image={Trello} />
-            <AvatarWithTooltip tooltip={"Milanote"} image={Milanote} />
-            <AvatarWithTooltip tooltip={"Bootstrap"} image={Bootstrap} />
-            <AvatarWithTooltip border={true} tooltip={"Bulma"} image={Bulma} />
-            <AvatarWithTooltip border={true} tooltip={"Plastic SCM"} image={Plastic} />
-            <AvatarWithTooltip tooltip={"React"} image={React} />
-            <AvatarWithTooltip border={true} tooltip={"Java"} image={Java} />
-            <AvatarWithTooltip tooltip={"Vite"} image={Vite} />
-            <AvatarWithTooltip tooltip={"Git"} image={Git} />
-            <AvatarWithTooltip tooltip={"Github"} image={Github} />
-            <AvatarWithTooltip tooltip={"GitLab"} image={Gitlab} />
-            <AvatarWithTooltip tooltip={"Visual Studio Code"} image={Code} />
-            <AvatarWithTooltip tooltip={"Blender"} image={Blender} />
-            <AvatarWithTooltip tooltip={"Audacity"} image={Audacity} />
-            <AvatarWithTooltip tooltip={"HTML"} image={Html} />
-            <AvatarWithTooltip tooltip={"CSS"} image={Css} />
-            <AvatarWithTooltip tooltip={"JavaScript"} image={Js} />
-            <AvatarWithTooltip tooltip={"PHP"} image={Php} />
+            <div className={"grid grid-cols-3 gap-y-8 mt-8"}>
+                <div>
+                    <Typography variant={"h4"} className={"text-center mb-3"}>Langages</Typography>
+                    <div className={"flex gap-2 justify-center"}>
+                        <AvatarWithTooltip tooltip={"C#"} image={CSharp}/>
+                        <AvatarWithTooltip tooltip={"HTML"} image={Html}/>
+                        <AvatarWithTooltip tooltip={"CSS"} image={Css}/>
+                        <AvatarWithTooltip tooltip={"JavaScript"} image={Js}/>
+                        <AvatarWithTooltip tooltip={"PHP"} image={Php}/>
+                        <AvatarWithTooltip border={true} tooltip={"Java"} image={Java}/>
+                        <AvatarWithTooltip tooltip={"XML"} image={Xml}/>
+                    </div>
+                    <div className={"flex gap-2 justify-center mt-2"}>
+                        <AvatarWithTooltip tooltip={"Python"} image={Python}/>
+                        <AvatarWithTooltip tooltip={"C"} image={C}/>
+                        <AvatarWithTooltip tooltip={"C++"} image={Cpp}/>
+                    </div>
+                </div>
+                <div>
+                    <Typography variant={"h4"} className={"text-center mb-3"}>IDEs</Typography>
+                    <div className={"flex gap-2 justify-center"}>
+                        <AvatarWithTooltip tooltip={"Jetbrains Rider"} image={Rider}/>
+                        <AvatarWithTooltip tooltip={"Jetbrains IntelliJ"} image={IntelliJ}/>
+                        <AvatarWithTooltip tooltip={"Jetbrains Webstorm"} image={WebStorm}/>
+                        <AvatarWithTooltip tooltip={"Jetbrains PyCharm"} image={PyCharm}/>
+                        <AvatarWithTooltip tooltip={"Visual Studio Code"} image={Code}/>
+                    </div>
+                </div>
+                <div>
+                    <Typography variant={"h4"} className={"text-center mb-3"}>Modélisation & graphisme</Typography>
+                    <div className={"flex gap-2 justify-center"}>
+                        <AvatarWithTooltip tooltip={"GIMP"} image={Gimp}/>
+                        <AvatarWithTooltip tooltip={"Blender"} image={Blender}/>
+                        <AvatarWithTooltip tooltip={"Blockbench"} image={Blockbench}/>
+                        <AvatarWithTooltip tooltip={"MagicaVoxel"} image={MagicaVoxel}/>
+                    </div>
+                </div>
+                <div>
+                    <Typography variant={"h4"} className={"text-center mb-3"}>Gestion et collaboration</Typography>
+                    <div className={"flex gap-2 justify-center"}>
+                        <AvatarWithTooltip tooltip={"Trello"} image={Trello}/>
+                        <AvatarWithTooltip border={true} tooltip={"Walling"} image={Walling}/>
+                        <AvatarWithTooltip tooltip={"Git"} image={Git}/>
+                        <AvatarWithTooltip tooltip={"Github"} image={Github}/>
+                        <AvatarWithTooltip tooltip={"GitLab"} image={Gitlab}/>
+                        <AvatarWithTooltip tooltip={"Milanote"} image={Milanote}/>
+                        <AvatarWithTooltip border={true} tooltip={"Plastic SCM"} image={Plastic}/>
+                        <AvatarWithTooltip tooltip={"Figma"} image={Figma}/>
+                    </div>
+                </div>
+                <div>
+                    <Typography variant={"h4"} className={"text-center mb-3"}>Développement web</Typography>
+                    <div className={"flex gap-2 justify-center"}>
+                        <AvatarWithTooltip border={true} tooltip={"Tailwind"} image={Tailwind}/>
+                        <AvatarWithTooltip tooltip={"Bootstrap"} image={Bootstrap}/>
+                        <AvatarWithTooltip border={true} tooltip={"Bulma"} image={Bulma}/>
+                        <AvatarWithTooltip tooltip={"React"} image={React}/>
+                        <AvatarWithTooltip tooltip={"Vite"} image={Vite}/>
+                    </div>
+
+                </div>
+                <div>
+                    <Typography variant={"h4"} className={"text-center mb-3"}>Développement de jeux-vidéos</Typography>
+                    <div className={"flex gap-2 justify-center"}>
+                        <AvatarWithTooltip tooltip={"Unity"} image={Unity}/>
+                        <AvatarWithTooltip tooltip={"Audacity"} image={Audacity}/>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <div className="mt-12">
