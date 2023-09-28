@@ -12,12 +12,12 @@ function TimelineElement (props) {
                     <BookOpenIcon className="h-4 w-4" />
                 }
             </TimelineIcon>
-            <Typography variant="h5" color="blue-gray">
+            <Typography variant="h5" color="blue-gray" className="dark:text-blue-gray-200">
                 {props.time} - {props.title}
             </Typography>
         </TimelineHeader>
         <TimelineBody className="pb-8">
-            <Typography color="gary" className="font-normal text-gray-600">
+            <Typography color="gary" className="font-normal text-gray-600 dark:text-gray-500">
                 {props.details}{props.details != undefined && <br />}
                 {props.place}
             </Typography>

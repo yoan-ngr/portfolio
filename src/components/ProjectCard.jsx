@@ -58,7 +58,7 @@ function formatTags (tags) {
    
 function ProjectCard(props) {
     return (
-        <Card className="max-w-[24rem] overflow-hidden">
+        <Card className="max-w-[24rem] overflow-hidden dark:bg-zinc-800">
             <CardHeader
             floated={false}
             shadow={false}
@@ -78,16 +78,16 @@ function ProjectCard(props) {
                         })
                     }
                 </div>
-                <Typography variant="h4" color="blue-gray">
+                <Typography variant="h4" color="blue-gray" className="dark:text-blue-gray-100">
                     {props.projectName}
                 </Typography>
-                <Typography  color="gray" className="mt-3 font-normal">
+                <Typography  color="gray" className="mt-3 font-normal dark:text-gray-400">
                     {props.catchphrase}
                 </Typography>
             </CardBody>
             <CardFooter className="flex items-center justify-between">
             
-                <Typography className="font-normal">{props.date}</Typography>
+                <Typography className="font-normal dark:text-zinc-400">{props.date}</Typography>
                 <Button variant="gradient" className="flex items-center gap-3">
                     <EyeIcon strokeWidth={2} className="h-5 w-5" />En savoir plus
                 </Button>

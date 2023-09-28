@@ -1,4 +1,4 @@
-import { Typography } from "@material-tailwind/react";
+import {Switch, Typography} from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 
 function NavList() {
@@ -6,45 +6,33 @@ function NavList() {
     return (
         <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
             <Typography
-                as="li"
+                as="a"
+                href="#"
                 variant="small"
                 color="blue-gray"
-                className="p-1 font-medium"
+                className="p-1 font-medium dark:text-blue-gray-100"
             >
-                <Link to={"/"} className="flex items-center hover:text-blue-500 transition-colors">
                 Accueil
-                </Link>
             </Typography>
             <Typography
-                as="li"
+                as="a"
+                href="#portfolio"
                 variant="small"
                 color="blue-gray"
-                className="p-1 font-medium"
+                className="p-1 font-medium dark:text-blue-gray-100"
             >
-                <Link to={"/blog"} className="flex items-center hover:text-blue-500 transition-colors">
-                Blog
-                </Link>
-            </Typography>
-            <Typography
-                as="li"
-                variant="small"
-                color="blue-gray"
-                className="p-1 font-medium"
-            >
-                <Link to={"/portfolio"} className="flex items-center hover:text-blue-500 transition-colors">
                 Portfolio
-                </Link>
             </Typography>
             <Typography
-                as="li"
+                as="a"
+                href="#about"
                 variant="small"
                 color="blue-gray"
-                className="p-1 font-medium"
+                className="p-1 font-medium dark:text-blue-gray-100"
             >
-                <Link to={"/about"} className="flex items-center hover:text-blue-500 transition-colors">
-                    À propos
-                </Link>
+                À propos
             </Typography>
+            <Switch/>
         </ul>
     );
 }

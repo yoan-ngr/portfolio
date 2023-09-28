@@ -1,14 +1,14 @@
 import { Typography } from "@material-tailwind/react";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../components/ProjectCard.jsx";
 
 
 function Portfolio () {
     return <>
         <div>
-            <Typography variant="h1" className="text-center" >Portfolio</Typography>
-            <Typography variant="lead" className="text-center">Découvrez les différents projets que j'ai réalisé !</Typography>
+            <Typography variant="h1" className="text-center dark:text-zinc-50" >Portfolio</Typography>
+            <Typography variant="lead" className="text-center dark:text-zinc-50">Découvrez les différents projets que j'ai réalisé !</Typography>
         </div>
-        <div className="mt-12 grid gap-12 grid-cols-3 justify-items-center">
+        <div className="mt-12 grid gap-12 grid-cols-4 justify-items-center">
             <ProjectCard 
                 projectName={'Institut Européen des Antioxydants'}
                 catchphrase={'La plateforme web de l\'IEA a été réalisé lors de mon stage de L3.'}
@@ -16,8 +16,8 @@ function Portfolio () {
                 date={2023}
             />
             <ProjectCard 
-                projectName={'Lawkdev'}
-                catchphrase={'Lawk Dev est mon site personnel, réalisé avec React, Material Tailwind et Vite.'}
+                projectName={'Portfolio'}
+                catchphrase={'Mon portfolio sur lequel vous vous trouvez actuellement, réalisé avec React, Material Tailwind et Vite.'}
                 tags={['web', 'tailwind', 'react', 'vite']}
                 date={2023}
             />

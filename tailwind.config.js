@@ -25,6 +25,7 @@ module.exports = withMT({
             }
         },
     },
+    darkMode: "media",
     plugins: [],
 });
 
