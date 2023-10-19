@@ -27,9 +27,9 @@ function App () {
 
     const changeJumboState = () => {
         let j = jumboState + 1;
-        if(j > 2)
+        if(j > 1)
             j = 0;
-
+        setJumboState(j);
     }
         
     return <div className="dark:bg-zinc-900">
@@ -43,7 +43,9 @@ function App () {
                 <div className="flex h-full items-center justify-center">
                     <div className="px-6 text-center text-white md:px-12">
                         <h1 className="mt-2 mb-16 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl">
-                            Je suis un <br /><span className="bg-amber-700 px-4 rounded-2xl cursor-pointer" onClick={changeJumboState}>développeur web</span>
+                            Je suis un <br /><span className="bg-amber-700 px-4 rounded-2xl cursor-pointer" onClick={changeJumboState}>{
+                                jumboState === 0 ? "développeur web" : "développeur de jeux-vidéos"
+                        }</span>
                         </h1>
                         <Button variant="outlined" size="lg" color="white">Découvrir mes projets</Button>
                     </div>
