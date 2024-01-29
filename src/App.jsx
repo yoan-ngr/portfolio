@@ -12,16 +12,7 @@ import {Button} from "@material-tailwind/react";
 
 function App () {
 
-    const handleWindowResize = () =>
-    window.innerWidth >= 960 && setOpenNav(false);
-    
-    React.useEffect(() => {
-        window.addEventListener("resize", handleWindowResize);
-        
-        return () => {
-            window.removeEventListener("resize", handleWindowResize);
-        };
-    }, []);
+
 
     const [jumboState, setJumboState] = useState(0);
 
@@ -34,7 +25,7 @@ function App () {
         
     return <div className="dark:bg-zinc-900">
         <Header />
-        <div className="relative overflow-hidden bg-cover bg-no-repeat h-[48rem]" style={{
+        <div id="home" className="relative overflow-hidden bg-cover bg-no-repeat h-[48rem]" style={{
             backgroundPosition:"50%",
             backgroundImage : `url(${Background})`
         }} >
@@ -43,11 +34,11 @@ function App () {
                 <div className="flex h-full items-center justify-center">
                     <div className="px-6 text-center text-white md:px-12">
                         <h1 className="mt-2 mb-16 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl">
-                            Je suis un <br /><span className="bg-amber-700 px-4 rounded-2xl cursor-pointer" onClick={changeJumboState}>{
+                            <span className="">Je suis un </span><br /><span className="bg-amber-700 px-4 rounded-2xl cursor-pointer" onClick={changeJumboState}>{
                                 jumboState === 0 ? "développeur web" : "développeur de jeux-vidéos"
                         }</span>
                         </h1>
-                        <Button variant="outlined" size="lg" color="white">Découvrir mes projets</Button>
+                        <Button variant="outlined" size="lg" color="white"><a href="#portfolio">Découvrir mes projets</a></Button>
                     </div>
                 </div>
             </div>

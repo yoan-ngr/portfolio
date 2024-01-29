@@ -1,25 +1,37 @@
 import { Typography } from "@material-tailwind/react";
 import ProjectCard from "../components/ProjectCard.jsx";
+import GBH from "../assets/gbh.png";
+import Crocosheets from "../assets/crocosheets.png";
+import PortfolioImg from "../assets/portfolio.png";
 
 
 function Portfolio () {
     return <>
-        <div>
+        <div id="portfolio">
             <Typography variant="h1" className="text-center dark:text-zinc-50" >Portfolio</Typography>
             <Typography variant="lead" className="text-center dark:text-zinc-50">Découvrez les différents projets que j'ai réalisé !</Typography>
         </div>
-        <div className="mt-12 grid gap-12 grid-cols-4 justify-items-center">
+        <div className="mt-12 grid gap-12 grid-cols-3 justify-items-center">
+            <ProjectCard
+                projectName={'CrocoSheets'}
+                catchphrase={'CrocoSheets est un site de gestion de feuilles de calcul en temps réel réalisée avec une équipe de 4 personnes dans un cadre universitaire.'}
+                tags={['web', 'express', 'react', 'tailwind', 'vite']}
+                date={2023}
+                src={Crocosheets}
+            />
             <ProjectCard 
                 projectName={'Institut Européen des Antioxydants'}
                 catchphrase={'La plateforme web de l\'IEA a été réalisé lors de mon stage de L3.'}
                 tags={['web', 'bulma', 'react', 'vite']}
                 date={2023}
+                link={"https://report.ie-antioxydants.com/"}
             />
             <ProjectCard 
                 projectName={'Portfolio'}
                 catchphrase={'Mon portfolio sur lequel vous vous trouvez actuellement, réalisé avec React, Material Tailwind et Vite.'}
                 tags={['web', 'tailwind', 'react', 'vite']}
                 date={2023}
+                src={PortfolioImg}
             />
             <ProjectCard 
                 projectName={'CrocoJourney'}
@@ -44,6 +56,8 @@ function Portfolio () {
                 catchphrase={'Get Back Home est un jeu vidéo réalisé en 48h pour la TUTO UNITY FR Game Jam sous le moteur Unity, en collaboration avec deux autres personnes.'}
                 tags={['jeu-vidéo', 'unity']}
                 date={2020}
+                src={GBH}
+                link={"https://truenoo.itch.io/getbackhome"}
             />
         </div>
         

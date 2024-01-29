@@ -1,5 +1,6 @@
 import { Typography } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 function Footer () {
 
@@ -15,26 +16,27 @@ function Footer () {
                     <Typography
                         as="a"
                         color="blue-gray"
-                        className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500 cursor-pointer"
+                        className="font-normal transition-colors dark:text-gray-400 hover:text-blue-500 focus:text-blue-500 cursor-pointer"
                     >
-                        Accueil
-                    </Typography>
-                </li>
-                <li>
-                    <Typography
-                        color="blue-gray"
-                        className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500 cursor-pointer"
-                    >
-                        Portfolio
+                        <AnchorLink href="#home">Accueil</AnchorLink>
                     </Typography>
                 </li>
                 <li>
                     <Typography
                         as="a"
                         color="blue-gray"
-                        className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500 cursor-pointer"
+                        className="font-normal transition-colors dark:text-gray-400 hover:text-blue-500 focus:text-blue-500 cursor-pointer"
                     >
-                        À propos
+                        <AnchorLink offset='125' href="#portfolio">Portfolio</AnchorLink>
+                    </Typography>
+                </li>
+                <li>
+                    <Typography
+                        as="a"
+                        color="blue-gray"
+                        className="font-normal transition-colors dark:text-gray-400 hover:text-blue-500 focus:text-blue-500 cursor-pointer"
+                    >
+                        <AnchorLink offset='125' href="#about">À propos</AnchorLink>
                     </Typography>
                 </li>
             </ul>

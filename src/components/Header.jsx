@@ -1,11 +1,22 @@
 import { Collapse, IconButton, Navbar, Typography } from "@material-tailwind/react";
-import { useState } from "react";
+import React, { useState } from "react";
 import NavList from "./Navlist";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 function Header () {
 
     const [openNav, setOpenNav] = useState(false);
+    const handleWindowResize = () =>
+        window.innerWidth >= 960 && setOpenNav(false);
+
+    React.useEffect(() => {
+        window.addEventListener("resize", handleWindowResize);
+
+        return () => {
+            window.removeEventListener("resize", handleWindowResize);
+        };
+    }, []);
 
     return  <Navbar className="sticky top-8 z-10 mx-auto max-w-screen-xl px-6 py-3 -my-8 dark:bg-zinc-800 dark:border-zinc-700">
             <div className="flex items-center justify-between text-blue-gray-900 dark:text-blue-gray-100">
@@ -14,7 +25,7 @@ function Header () {
                     variant="h6"
                     className="mr-4 cursor-pointer py-1.5"
                 >
-                    Yoan Nougué-Ruiz
+                    <AnchorLink href="#home">Yoan Nougué-Ruiz</AnchorLink>
                 </Typography>
                 <div className="hidden lg:block">
                     <NavList />

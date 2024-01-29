@@ -9,7 +9,7 @@ function About () {
     let birth = new Date("2001-08-10");
     let age = Math.abs(new Date(birth-date).getUTCFullYear() - 1970);
 
-    return <div className={"mt-12"}>
+    return <div className={"mt-12"} id="about">
         <div>
             <Typography variant="h1" className="text-center dark:text-zinc-50">À propos</Typography>
         </div>

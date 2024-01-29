@@ -1,5 +1,6 @@
 import {Switch, Typography} from "@material-tailwind/react";
 import { Link } from "react-router-dom";
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 function NavList() {
     
@@ -12,7 +13,7 @@ function NavList() {
                 color="blue-gray"
                 className="p-1 font-medium dark:text-blue-gray-100"
             >
-                Accueil
+                <AnchorLink href="#home">Accueil</AnchorLink>
             </Typography>
             <Typography
                 as="a"
@@ -21,7 +22,7 @@ function NavList() {
                 color="blue-gray"
                 className="p-1 font-medium dark:text-blue-gray-100"
             >
-                Portfolio
+                <AnchorLink offset='125' href="#portfolio">Portfolio</AnchorLink>
             </Typography>
             <Typography
                 as="a"
@@ -30,7 +31,7 @@ function NavList() {
                 color="blue-gray"
                 className="p-1 font-medium dark:text-blue-gray-100"
             >
-                À propos
+                <AnchorLink offset='125' href="#about">À propos</AnchorLink>
             </Typography>
             <Switch/>
         </ul>
