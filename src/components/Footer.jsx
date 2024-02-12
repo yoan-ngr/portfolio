@@ -14,7 +14,6 @@ function Footer () {
             <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
                 <li>
                     <Typography
-                        as="a"
                         color="blue-gray"
                         className="font-normal transition-colors dark:text-gray-400 hover:text-blue-500 focus:text-blue-500 cursor-pointer"
                     >
@@ -23,7 +22,6 @@ function Footer () {
                 </li>
                 <li>
                     <Typography
-                        as="a"
                         color="blue-gray"
                         className="font-normal transition-colors dark:text-gray-400 hover:text-blue-500 focus:text-blue-500 cursor-pointer"
                     >
@@ -32,11 +30,18 @@ function Footer () {
                 </li>
                 <li>
                     <Typography
-                        as="a"
                         color="blue-gray"
                         className="font-normal transition-colors dark:text-gray-400 hover:text-blue-500 focus:text-blue-500 cursor-pointer"
                     >
                         <AnchorLink offset='125' href="#about">À propos</AnchorLink>
+                    </Typography>
+                </li>
+                <li>
+                    <Typography
+                        color="blue-gray"
+                        className="font-normal transition-colors dark:text-gray-400 hover:text-blue-500 focus:text-blue-500 cursor-pointer"
+                    >
+                        <AnchorLink offset='125' href="#contact">Contact</AnchorLink>
                     </Typography>
                 </li>
             </ul>

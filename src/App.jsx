@@ -34,7 +34,7 @@ function App () {
                 <div className="flex h-full items-center justify-center">
                     <div className="px-6 text-center text-white md:px-12">
                         <h1 className="mt-2 mb-16 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl">
-                            <span className="">Je suis un </span><br /><span className="bg-amber-700 px-4 rounded-2xl cursor-pointer" onClick={changeJumboState}>{
+                            <span className="">Je suis un </span><br /><span className="bg-amber-700 px-4 rounded-2xl select-none cursor-pointer" onClick={changeJumboState}>{
                                 jumboState === 0 ? "développeur web" : "développeur de jeux-vidéos"
                         }</span>
                         </h1>

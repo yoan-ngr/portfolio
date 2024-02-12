@@ -2,7 +2,7 @@ import {Button, Input, Option, Select, Textarea, Typography} from "@material-tai
 import React from "../assets/technos/react.png";
 
 function Contact () {
-    return <div className="mt-12">
+    return <div className="mt-12" id="contact">
         <Typography variant="h2" className="text-center dark:text-blue-gray-100">Contact</Typography>
         <Typography variant="lead" className="text-center dark:text-blue-gray-100">Vous souhaitez me contacter? Utilisez le formulaire ci-dessous !</Typography>
         <form className="mt-8 px-96">
