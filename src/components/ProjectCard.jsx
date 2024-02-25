@@ -11,6 +11,7 @@ import {
 import {EyeIcon} from '@heroicons/react/24/solid';
 import {InformationCircleIcon, XMarkIcon} from '@heroicons/react/24/outline';
 import {useState} from "react";
+import NoPic from "../assets/no-pic.png";
 
 function formatTags (tags) {
     let res = [];
@@ -63,7 +64,7 @@ function ProjectCard(props) {
             className="m-0 rounded-none"
             >
             <img
-                src={props.src === undefined ? "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" : props.src}
+                src={props.src === undefined ? NoPic : props.src}
                 alt="ui/ux review check"
             />
             </CardHeader>

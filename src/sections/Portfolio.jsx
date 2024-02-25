@@ -41,7 +41,8 @@ function Portfolio () {
             />
             <ProjectCard 
                 projectName={'Projet Boissons'}
-                catchphrase={'Projet Boissons est projet universitaire de site de recettes de cocktails, avec des fonctions de recherche et de favoris.'}
+                catchphrase={'Projet Boissons est un projet universitaire de site de recettes de cocktails, avec des fonctions de recherche et de favoris.'}
+                description={<p><b>Projet Boissons</b> est un site de recettes de cocktail réalisé dans le cadre d'un projet universitaire, utilisant des technologies web telles que le PHP ainsi que Bootstrap comme bibliothèque CSS.</p>}
                 tags={['web', 'bootstrap', 'php']}
                 date={2022}
             />

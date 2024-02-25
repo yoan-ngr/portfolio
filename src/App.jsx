@@ -8,6 +8,7 @@ import About from "./sections/About.jsx";
 import Portfolio from "./sections/Portfolio.jsx";
 import Background from "./assets/6682222.jpg";
 import {Button} from "@material-tailwind/react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 
 function App () {
@@ -22,7 +23,10 @@ function App () {
             j = 0;
         setJumboState(j);
     }
-        
+
+
+
+
     return <div className="dark:bg-zinc-900">
         <Header />
         <div id="home" className="relative overflow-hidden bg-cover bg-no-repeat h-[48rem]" style={{
@@ -38,7 +42,7 @@ function App () {
                                 jumboState === 0 ? "développeur web" : "développeur de jeux-vidéos"
                         }</span>
                         </h1>
-                        <Button variant="outlined" size="lg" color="white"><a href="#portfolio">Découvrir mes projets</a></Button>
+                        <Button variant="outlined" size="lg" color="white"><AnchorLink offset='125'  href="#portfolio">Découvrir mes projets</AnchorLink></Button>
                     </div>
                 </div>
             </div>

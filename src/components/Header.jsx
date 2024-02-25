@@ -21,7 +21,6 @@ function Header () {
     return  <Navbar className="sticky top-8 z-10 mx-auto max-w-screen-xl px-6 py-3 -my-8 dark:bg-zinc-800 dark:border-zinc-700">
             <div className="flex items-center justify-between text-blue-gray-900 dark:text-blue-gray-100">
                 <Typography
-                    as="a"
                     variant="h6"
                     className="mr-4 cursor-pointer py-1.5"
                 >

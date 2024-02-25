@@ -17,7 +17,7 @@ function TimelineElement (props) {
             </Typography>
         </TimelineHeader>
         <TimelineBody className="pb-8">
-            <Typography color="gary" className="font-normal text-gray-600 dark:text-gray-500">
+            <Typography color="gray" className="font-normal text-gray-600 dark:text-gray-500">
                 {props.details}{props.details != undefined && <br />}
                 {props.place}
             </Typography>
