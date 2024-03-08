@@ -13,6 +13,13 @@ function Portfolio () {
         </div>
         <div className="mt-12 grid gap-12 grid-cols-3 justify-items-center">
             <ProjectCard
+                projectName={'TETRIS'}
+                catchphrase={'TETRIS est un jeu-vidéo mobile développé sur Unity, basé sur le jeu d\'arcade.'}
+                tags={['unity', 'jeu-vidéo']}
+                link={"https://github.com/yoan-ngr/TETRIS"}
+                date={2024}
+            />
+            <ProjectCard
                 projectName={'CrocoSheets'}
                 catchphrase={'CrocoSheets est un site de gestion de feuilles de calcul en temps réel réalisée avec une équipe de 4 personnes dans un cadre universitaire.'}
                 tags={['web', 'express', 'react', 'tailwind', 'vite']}
