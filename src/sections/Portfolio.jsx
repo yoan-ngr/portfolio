@@ -1,9 +1,9 @@
-import { Typography } from "@material-tailwind/react";
+import {Alert, Typography} from "@material-tailwind/react";
 import ProjectCard from "../components/ProjectCard.jsx";
 import GBH from "../assets/gbh.png";
 import Crocosheets from "../assets/crocosheets.png";
 import PortfolioImg from "../assets/portfolio.png";
-
+import {ExclamationTriangleIcon } from '@heroicons/react/24/solid';
 
 function Portfolio () {
     return <>
@@ -12,14 +12,14 @@ function Portfolio () {
             <Typography variant="lead" className="text-center dark:text-zinc-50">Découvrez les différents projets que j'ai réalisé !</Typography>
         </div>
         <div className="mt-12 grid gap-12 grid-cols-3 justify-items-center">
-            <ProjectCard
+            {/*<ProjectCard
                 projectName={'CrocoSheets'}
                 catchphrase={'CrocoSheets est un site de gestion de feuilles de calcul en temps réel réalisée avec une équipe de 4 personnes dans un cadre universitaire.'}
                 tags={['web', 'express', 'react', 'tailwind', 'vite']}
                 date={2023}
                 src={Crocosheets}
             />
-            <ProjectCard 
+            <ProjectCard
                 projectName={'Institut Européen des Antioxydants'}
                 catchphrase={'La plateforme web de l\'IEA a été réalisé lors de mon stage de L3.'}
                 tags={['web', 'bulma', 'react', 'vite']}
@@ -66,9 +66,9 @@ function Portfolio () {
                         Le jeu a été fait avec le moteur Unity et programmé en C#.
                     </>
                 }
-            />
+            />*/}
         </div>
-        
+        <Alert color="amber" className="w-1/2 mx-auto items-center" icon={<ExclamationTriangleIcon className="w-8 h-8" />}><b>Oups ! </b>Cette section est toujours en chantier. Revenez plus tard !</Alert>
     </>
 }
 

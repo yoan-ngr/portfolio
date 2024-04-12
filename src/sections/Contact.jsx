@@ -19,7 +19,7 @@ function Contact () {
 
     const validateEmail = (email) => {
         return email.match(
-            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         );
     };
 
@@ -76,12 +76,6 @@ function Contact () {
             setSuccess(-1);
         });
     }
-
-    function Icon() {
-
-    }
-
-
     return <div className="mt-12" id="contact">
         <Typography variant="h2" className="text-center dark:text-blue-gray-100">Contact</Typography>
         <Typography variant="lead" className="text-center dark:text-blue-gray-100">Vous souhaitez me contacter? Utilisez le formulaire ci-dessous !</Typography>

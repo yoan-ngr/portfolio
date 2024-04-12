@@ -24,7 +24,7 @@ function Cursus () {
                     <TimelineElement
                         type="job"
                         time={"2023"}
-                        title="Stage"
+                        title="Stage (15 semaines)"
                         place="Institut Européen des Antioxydants - Neuves-Maisons (54320)"
                         details="Continuation du dernier stage, remise à jour des technologies"
                     />
@@ -48,7 +48,7 @@ function Cursus () {
                     <TimelineElement
                         type="job"
                         time={"2021"}
-                        title="Stage"
+                        title="Stage (10 semaines)"
                         place="Institut Européen des Antioxydants - Neuves-Maisons (54320)"
                         details="Réalisation d'une plateforme de gestion d'analyse et de rapports médicaux"
                     />
