@@ -56,8 +56,8 @@ function ProjectCard(props) {
     const handleOpen = () => setOpen(!open);
 
     return (
-        <Card className="max-w-[24rem] overflow-hidden dark:bg-zinc-800">
-            <CardHeader
+        <Card className="overflow-hidden dark:bg-zinc-800 flex flex-col justify-between">
+            <div className="flex flex-col"><CardHeader
             floated={false}
             shadow={false}
             color="transparent"
@@ -82,7 +82,7 @@ function ProjectCard(props) {
                 <Typography  color="gray" className="mt-3 font-normal dark:text-gray-400">
                     {props.catchphrase}
                 </Typography>
-            </CardBody>
+            </CardBody></div>
             <CardFooter className="flex items-center justify-between">
             
                 <Typography className="font-normal dark:text-zinc-400">{props.date}</Typography>
@@ -210,7 +210,7 @@ function ProjectCard(props) {
                     {
                         props.link !== undefined &&
                         <a className="mr-3" href={props.link} target="_blank" rel="external">
-                            <Button variant="gradient" color="orange" className="flex items-center gap-2"
+                            <Button variant="gradient" color="green" className="flex items-center gap-2"
                                     onClick={handleOpen}>
                                 <InformationCircleIcon strokeWidth={2} className="h-5 w-5"/><span>Consulter</span>
                             </Button>
