@@ -1,4 +1,5 @@
-import { Typography } from "@material-tailwind/react";
+import {Alert, Typography} from "@material-tailwind/react";
+import {ExclamationTriangleIcon} from "@heroicons/react/24/solid";
 
 
 function Portfolio () {
@@ -72,9 +73,9 @@ function Portfolio () {
                     </>
                     />
                 */}
-
         </div>
-        
+        <Alert color="amber" className="w-1/2 mx-auto" icon={<ExclamationTriangleIcon className="w-8 h-8" />}><b>Oups !</b> Cette section n'est pas encore terminée. Revenez plus tard !</Alert>
+
     </>
 }
 
