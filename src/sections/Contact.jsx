@@ -64,8 +64,7 @@ function Contact () {
             email : email,
             type : type,
             message : message
-        }).then(function(response) {
-            //console.log('SUCCESS!', response.status, response.text);
+        }).then(function() {
             setSuccess(1);
             setName("");
             setEmail("");
@@ -76,11 +75,6 @@ function Contact () {
             setSuccess(-1);
         });
     }
-
-    function Icon() {
-
-    }
-
 
     return <div className="mt-12" id="contact">
         <Typography variant="h2" className="text-center dark:text-blue-gray-100">Contact</Typography>
@@ -110,7 +104,7 @@ function Contact () {
 
         <form className="mt-8 px-96">
             <div>
-                <Input label="Nom" className="dark:text-gray-400" value={name} onChange={handleChangeName} error={!nameValid} />
+                <Input label="Nom" color="blue" value={name} onChange={handleChangeName} error={!nameValid} />
                 {
                     !nameValid && <Typography
                         variant="small"
@@ -123,7 +117,7 @@ function Contact () {
                 }
             </div>
             <div className="mt-4">
-                <Input error={!emailValid} className="dark:text-gray-400" label="Adresse e-mail" type="email" value={email} onChange={handleChangeEmail} />
+                <Input error={!emailValid} color="blue" label="Adresse e-mail" type="email" value={email} onChange={handleChangeEmail} />
                 {
                     !emailValid && <Typography
                         variant="small"
@@ -136,7 +130,7 @@ function Contact () {
                 }
             </div>
             <div className="mt-4">
-                <Select className="dark:text-gray-400" label="Raison du contact" value={type} onChange={(e) => setType(e)}>
+                <Select color="blue" label="Raison du contact" value={type} onChange={(e) => setType(e)}>
                     <Option value="Question">Question</Option>
                     <Option value="Mission en freelance">Mission en freelance</Option>
                     <Option value="Proposition de collaboration">Proposition de collaboration</Option>
@@ -145,7 +139,7 @@ function Contact () {
                 </Select>
             </div>
             <div className="mt-4">
-                <Textarea value={message} onChange={handleChangeMessage} error={!messageValid} className="dark:text-gray-400" label="Message"/>
+                <Textarea value={message} color="blue" onChange={handleChangeMessage} error={!messageValid} className="" label="Message"/>
                 {
                     !messageValid && <Typography
                         variant="small"

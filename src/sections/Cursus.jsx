@@ -1,6 +1,5 @@
 import {Timeline, Typography} from "@material-tailwind/react";
 import TimelineElement from "../components/TimelineElement.jsx";
-import React from "../assets/technos/react.png";
 
 function Cursus () {
     return <div className="mt-12">

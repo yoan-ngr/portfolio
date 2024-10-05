@@ -5,11 +5,11 @@ import {
     CardFooter,
     Typography,
     Button,
-    Chip, DialogFooter, DialogBody, DialogHeader, Dialog, Carousel, IconButton,
+    Chip, DialogFooter, DialogBody, DialogHeader, Dialog,
 } from "@material-tailwind/react";
 
 import {EyeIcon} from '@heroicons/react/24/solid';
-import {InformationCircleIcon, XMarkIcon} from '@heroicons/react/24/outline';
+import {InformationCircleIcon, XMarkIcon, CodeBracketIcon} from '@heroicons/react/24/outline';
 import {useState} from "react";
 import NoPic from "../assets/no-pic.png";
 
@@ -86,12 +86,12 @@ function ProjectCard(props) {
             <CardFooter className="flex items-center justify-between">
             
                 <Typography className="font-normal dark:text-zinc-400">{props.date}</Typography>
-                <Button variant="gradient" className="flex items-center gap-3" onClick={handleOpen}>
-                    <EyeIcon strokeWidth={2} className="h-5 w-5" />En savoir plus
-                </Button>
+                {props.openable && <Button variant="gradient" color="blue" className="flex items-center gap-3" onClick={handleOpen}>
+                    <EyeIcon strokeWidth={2} className="h-5 w-5"/>En savoir plus
+                </Button>}
             </CardFooter>
 
-            <Dialog open={open} handler={handleOpen} className="dark:bg-zinc-800 h-[42rem] overflow-y-scroll" size={"lg"}>
+            <Dialog open={open} handler={handleOpen} className="dark:bg-zinc-800 h-5/6 overflow-y-scroll" size={"xl"}>
                 <DialogHeader className="dark:text-white">
                     <figure className="relative h-80 w-full">
                         <img
@@ -123,96 +123,26 @@ function ProjectCard(props) {
                 </DialogHeader>
                 <DialogBody className="dark:text-zinc-400">
                     <Typography variant="lead">{props.catchphrase}</Typography>
-                    <Typography variant="h4" className="my-3 dark:text-zinc-300">Description</Typography>
-                    <span>{props.description}</span>
-                    <Typography variant="h4" className="mt-3 mb-6 dark:text-zinc-300">Galerie</Typography>
-                    <Carousel loop={true} autoplay={true} className="rounded-xl" navigation={({ setActiveIndex, activeIndex, length }) => (
-                        <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
-                            {new Array(length).fill("").map((_, i) => (
-                                <span
-                                    key={i}
-                                    className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                                        activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
-                                    }`}
-                                    onClick={() => setActiveIndex(i)}
-                                />
-                            ))}
-                        </div>
-                    )} prevArrow={({ handlePrev }) => (
-                        <IconButton
-                            variant="text"
-                            color="white"
-                            size="lg"
-                            onClick={handlePrev}
-                            className="!absolute top-2/4 left-4 -translate-y-2/4"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth={2}
-                                stroke="currentColor"
-                                className="h-6 w-6"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-                                />
-                            </svg>
-                        </IconButton>
-                    )}
-                              nextArrow={({ handleNext }) => (
-                                  <IconButton
-                                      variant="text"
-                                      color="white"
-                                      size="lg"
-                                      onClick={handleNext}
-                                      className="!absolute top-2/4 !right-4 -translate-y-2/4"
-                                  >
-                                      <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          fill="none"
-                                          viewBox="0 0 24 24"
-                                          strokeWidth={2}
-                                          stroke="currentColor"
-                                          className="h-6 w-6"
-                                      >
-                                          <path
-                                              strokeLinecap="round"
-                                              strokeLinejoin="round"
-                                              d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                                          />
-                                      </svg>
-                                  </IconButton>
-                              )}>
-                        <img
-                            src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                            alt="image 1"
-                            className="h-full w-full object-cover object-center"
-                        />
-                        <img
-                            src="https://images.unsplash.com/photo-1432462770865-65b70566d673?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                            alt="image 2"
-                            className="h-full w-full object-cover object-center"
-                        />
-                        <img
-                            src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
-                            alt="image 3"
-                            className="h-full w-full object-cover object-center"
-                        />
-                    </Carousel>
-                    <br/>
+                    {props.content}
                     {props.link !== undefined && <Typography>Vous pouvez découvrir le projet en cliquant sur le bouton "consulter"
                         ci-dessous.</Typography>}
                 </DialogBody>
-                <DialogFooter>
+                <DialogFooter className="flex gap-3">
                     {
                         props.link !== undefined &&
-                        <a className="mr-3" href={props.link} target="_blank" rel="external">
+                        <a href={props.link} target="_blank" rel="external">
                             <Button variant="gradient" color="green" className="flex items-center gap-2"
                                     onClick={handleOpen}>
                                 <InformationCircleIcon strokeWidth={2} className="h-5 w-5"/><span>Consulter</span>
+                            </Button>
+                        </a>
+                    }
+                    {
+                        props.github !== undefined &&
+                        <a href={props.github} target="_blank" rel="external">
+                            <Button variant="gradient" color="white" className="flex items-center gap-2"
+                                    onClick={handleOpen}>
+                                <CodeBracketIcon strokeWidth={2} className="h-5 w-5"/><span>Code source</span>
                             </Button>
                         </a>
                     }

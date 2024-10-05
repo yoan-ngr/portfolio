@@ -1,5 +1,4 @@
-import {Switch, Typography} from "@material-tailwind/react";
-import { Link } from "react-router-dom";
+import {Typography} from "@material-tailwind/react";
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 function NavList() {

@@ -1,13 +1,12 @@
-import { Card, Timeline, Typography } from "@material-tailwind/react"
+import { Card, Typography } from "@material-tailwind/react"
 import pp from '../assets/pp.jpg'
 import AboutChevronDetails from "../components/AboutChevronDetails.jsx";
-import React from '../assets/technos/react.png';
 
 function About () {
 
     let date = new Date();
     let birth = new Date("2001-08-10");
-    let age = Math.abs(new Date(birth-date).getUTCFullYear() - 1970);
+    let age = Math.abs(new Date(birth-date).getUTCFullYear() - 1969);
 
     return <div className={"mt-12"} id="about">
         <div>

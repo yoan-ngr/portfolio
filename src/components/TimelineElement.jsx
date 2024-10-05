@@ -3,12 +3,12 @@ import {AcademicCapIcon, BriefcaseIcon, BookOpenIcon, } from '@heroicons/react/2
 
 function TimelineElement (props) {
     return <TimelineItem>
-        {props.connector == true || props.connector == undefined && <TimelineConnector />}
+        {props.connector === true || props.connector === undefined && <TimelineConnector />}
         <TimelineHeader>
-            <TimelineIcon className={"p-2 " + (props.type == "job" ? "bg-light-green-500" : props.type == "studies" ? "bg-orange-500" :  "")}>
+            <TimelineIcon className={"p-2 " + (props.type === "job" ? "bg-light-green-500" : props.type === "studies" ? "bg-orange-500" :  "bg-blue-500")}>
                 {
-                    props.type == "diploma" ? <AcademicCapIcon className="h-4 w-4" /> : 
-                    props.type == "job" ? <BriefcaseIcon className="h-4 w-4" /> :
+                    props.type === "diploma" ? <AcademicCapIcon className="h-4 w-4" /> :
+                    props.type === "job" ? <BriefcaseIcon className="h-4 w-4" /> :
                     <BookOpenIcon className="h-4 w-4" />
                 }
             </TimelineIcon>
@@ -18,7 +18,7 @@ function TimelineElement (props) {
         </TimelineHeader>
         <TimelineBody className="pb-8">
             <Typography color="gray" className="font-normal text-gray-600 dark:text-gray-500">
-                {props.details}{props.details != undefined && <br />}
+                {props.details}{props.details !== undefined && <br />}
                 {props.place}
             </Typography>
         </TimelineBody>
