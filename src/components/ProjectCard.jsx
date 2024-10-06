@@ -69,7 +69,7 @@ function ProjectCard(props) {
             />
             </CardHeader>
             <CardBody>
-                <div className="flex gap-1 mb-2">
+                <div className="flex flex-wrap gap-1 mb-2">
                     {
                         formatTags(props.tags).map((tag) => {
                             return <Chip key={tag.value} color={tag.color} variant="gradient" value={tag.value} />
@@ -83,11 +83,11 @@ function ProjectCard(props) {
                     {props.catchphrase}
                 </Typography>
             </CardBody></div>
-            <CardFooter className="flex items-center justify-between">
+            <CardFooter className="flex items-center justify-between gap-2">
             
                 <Typography className="font-normal dark:text-zinc-400">{props.date}</Typography>
                 {props.openable && <Button variant="gradient" color="blue" className="flex items-center gap-3" onClick={handleOpen}>
-                    <EyeIcon strokeWidth={2} className="h-5 w-5"/>En savoir plus
+                    <EyeIcon strokeWidth={2} className="h-5 w-5 hidden sm:block"/>En savoir plus
                 </Button>}
             </CardFooter>
 
@@ -109,7 +109,7 @@ function ProjectCard(props) {
                                 </Typography>
                             </div>
                             <Typography variant="h5" color="blue-gray">
-                                <div className="flex gap-1">
+                                <div className="flex gap-1 flex-wrap">
                                     {
                                     formatTags(props.tags).map((tag) => {
                                         return <Chip key={tag.value} color={tag.color} variant="gradient"

@@ -39,10 +39,10 @@ function Technos () {
     return <div className="mt-12">
         <Typography variant="h2" className="text-center dark:text-zinc-50">Logiciels et technologies</Typography>
 
-        <div className={"grid grid-cols-3 gap-y-8 mt-8"}>
+        <div className={"lg:grid lg:grid-cols-3 gap-y-8 mt-8 flex flex-col"}>
             <div>
                 <Typography variant={"h4"} className={"text-center mb-3 dark:text-zinc-50"}>Langages</Typography>
-                <div className={"flex gap-2 justify-center"}>
+                <div className={"flex gap-2 justify-center flex-wrap w-3/5 mx-auto lg:w-full"}>
                     <AvatarWithTooltip tooltip={"C#"} image={CSharp}/>
                     <AvatarWithTooltip tooltip={"HTML"} image={Html}/>
                     <AvatarWithTooltip tooltip={"CSS"} image={Css}/>
@@ -50,8 +50,6 @@ function Technos () {
                     <AvatarWithTooltip tooltip={"PHP"} image={Php}/>
                     <AvatarWithTooltip border={true} tooltip={"Java"} image={Java}/>
                     <AvatarWithTooltip tooltip={"XML"} image={Xml}/>
-                </div>
-                <div className={"flex gap-2 justify-center mt-2"}>
                     <AvatarWithTooltip tooltip={"Python"} image={Python}/>
                     <AvatarWithTooltip tooltip={"C"} image={C}/>
                     <AvatarWithTooltip tooltip={"C++"} image={Cpp}/>
@@ -59,7 +57,7 @@ function Technos () {
             </div>
             <div>
                 <Typography variant={"h4"} className={"text-center mb-3 dark:text-zinc-50"}>IDEs</Typography>
-                <div className={"flex gap-2 justify-center"}>
+                <div className={"flex gap-2 justify-center flex-wrap w-3/5 mx-auto lg:w-full"}>
                     <AvatarWithTooltip tooltip={"Jetbrains Rider"} image={Rider}/>
                     <AvatarWithTooltip tooltip={"Jetbrains IntelliJ"} image={IntelliJ}/>
                     <AvatarWithTooltip tooltip={"Jetbrains Webstorm"} image={WebStorm}/>
@@ -69,7 +67,7 @@ function Technos () {
             </div>
             <div>
                 <Typography variant={"h4"} className={"text-center mb-3 dark:text-zinc-50"}>Modélisation & graphisme</Typography>
-                <div className={"flex gap-2 justify-center"}>
+                <div className={"flex gap-2 justify-center flex-wrap w-3/5 mx-auto lg:w-full"}>
                     <AvatarWithTooltip tooltip={"GIMP"} image={Gimp}/>
                     <AvatarWithTooltip tooltip={"Blender"} image={Blender}/>
                     <AvatarWithTooltip tooltip={"Blockbench"} image={Blockbench}/>
@@ -78,7 +76,7 @@ function Technos () {
             </div>
             <div>
                 <Typography variant={"h4"} className={"text-center mb-3 dark:text-zinc-50"}>Gestion et collaboration</Typography>
-                <div className={"flex gap-2 justify-center"}>
+                <div className={"flex gap-2 justify-center flex-wrap w-3/5 mx-auto lg:w-full"}>
                     <AvatarWithTooltip tooltip={"Trello"} image={Trello}/>
                     <AvatarWithTooltip border={true} tooltip={"Walling"} image={Walling}/>
                     <AvatarWithTooltip tooltip={"Git"} image={Git}/>
@@ -91,7 +89,7 @@ function Technos () {
             </div>
             <div>
                 <Typography variant={"h4"} className={"text-center mb-3 dark:text-zinc-50"}>Développement web</Typography>
-                <div className={"flex gap-2 justify-center"}>
+                <div className={"flex gap-2 justify-center flex-wrap w-3/5 mx-auto lg:w-full"}>
                     <AvatarWithTooltip border={true} tooltip={"Tailwind"} image={Tailwind}/>
                     <AvatarWithTooltip tooltip={"Bootstrap"} image={Bootstrap}/>
                     <AvatarWithTooltip border={true} tooltip={"Bulma"} image={Bulma}/>
@@ -102,7 +100,7 @@ function Technos () {
             </div>
             <div>
                 <Typography variant={"h4"} className={"text-center mb-3 dark:text-zinc-50"}>Développement de jeux-vidéos</Typography>
-                <div className={"flex gap-2 justify-center"}>
+                <div className={"flex gap-2 justify-center flex-wrap w-3/5 mx-auto lg:w-full"}>
                     <AvatarWithTooltip tooltip={"Unity"} image={Unity}/>
                     <AvatarWithTooltip tooltip={"Audacity"} image={Audacity}/>
                 </div>

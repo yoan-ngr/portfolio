@@ -2,10 +2,10 @@ import {Timeline, Typography} from "@material-tailwind/react";
 import TimelineElement from "../components/TimelineElement.jsx";
 
 function Cursus () {
-    return <div className="mt-12">
+    return <div className="mt-12 px-2 sm:px-6 md:px-24">
         <Typography variant="h2" className="text-center dark:text-zinc-50">Parcours</Typography>
 
-        <div className="flex justify-center gap-16 mt-16">
+        <div className="lg:flex lg:justify-center lg:gap-16 mt-8 md:mt-16">
             <div className={""}>
                 <Timeline>
                     <TimelineElement

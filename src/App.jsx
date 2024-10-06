@@ -12,7 +12,7 @@ function App () {
     return <div className="dark:bg-zinc-900">
         <Header />
         <Hero />
-        <div className="mx-24 my-12 h-/5">
+        <div className="lg:mx-24 my-12 h-/5">
             <Portfolio />
             <About />
             <Cursus />

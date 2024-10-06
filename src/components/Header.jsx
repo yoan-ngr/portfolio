@@ -18,7 +18,7 @@ function Header () {
         };
     }, []);
 
-    return  <Navbar className="sticky top-8 z-10 mx-auto max-w-screen-xl px-6 py-3 -my-8 dark:bg-zinc-800 dark:border-zinc-700">
+    return  <Navbar className="sticky top-8 z-10 mx-auto w-3/4 xl:max-w-screen-xl px-6 py-3 -my-8 dark:bg-zinc-800 dark:border-zinc-700">
             <div className="flex items-center justify-between text-blue-gray-900 dark:text-blue-gray-100">
                 <Typography
                     variant="h6"

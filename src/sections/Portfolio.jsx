@@ -14,9 +14,9 @@ function Portfolio () {
     return <>
         <div id="portfolio">
             <Typography variant="h1" className="text-center dark:text-zinc-50" >Portfolio</Typography>
-            <Typography variant="lead" className="text-center dark:text-zinc-50">Découvrez les différents projets que j'ai réalisé !</Typography>
+            <Typography variant="lead" className="text-center dark:text-zinc-50 px-3">Découvrez les différents projets que j'ai réalisé !</Typography>
         </div>
-        <div className="mt-12 grid gap-12 grid-cols-3 justify-items-center">
+        <div className="mt-12 grid gap-12 lg:grid-cols-2 xl:grid-cols-3 px-6 justify-items-center">
             <ProjectCard
                 projectName={'Portfolio'}
                 catchphrase={'Mon portfolio sur lequel vous vous trouvez actuellement, réalisé avec React, Material Tailwind et Vite.'}

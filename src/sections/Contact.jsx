@@ -78,12 +78,12 @@ function Contact () {
 
     return <div className="mt-12" id="contact">
         <Typography variant="h2" className="text-center dark:text-blue-gray-100">Contact</Typography>
-        <Typography variant="lead" className="text-center dark:text-blue-gray-100">Vous souhaitez me contacter? Utilisez le formulaire ci-dessous !</Typography>
+        <Typography variant="lead" className="text-center dark:text-blue-gray-100 px-2">Vous souhaitez me contacter? Utilisez le formulaire ci-dessous !</Typography>
 
         <Alert
             variant="gradient"
             color="green"
-            className="my-3 w-1/2 mx-auto"
+            className="my-3  w-3/4 md:w-2/3 xl:w-1/2 mx-auto"
             icon={<CheckCircleIcon/>}
             onClose={() => setSuccess(0)}
             open={success === 1}
@@ -94,7 +94,7 @@ function Contact () {
         <Alert
             variant="gradient"
             color="red"
-            className="my-3 w-1/2 mx-auto"
+            className="my-3 w-3/4 md:w-2/3 xl:w-1/2 mx-auto"
             icon={<CheckCircleIcon/>}
             onClose={() => setSuccess(0)}
             open={success === -1}
@@ -102,7 +102,7 @@ function Contact () {
             Une erreur est survenue lors de l'envoi du message. Veuillez réessayer ultérieurement, ou envoyer un mail directement à <a className="font-semibold hover:underline" href="mailto:yoan.nougueruiz@gmail.com">yoan.nougueruiz@gmail.com</a>.
         </Alert>
 
-        <form className="mt-8 px-96">
+        <form className="mt-8 mx-6 sm:w-2/3 sm:mx-auto xl:w-2/5">
             <div>
                 <Input label="Nom" color="blue" value={name} onChange={handleChangeName} error={!nameValid} />
                 {
